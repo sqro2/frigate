@@ -1,0 +1,216 @@
+body{
+	
+	margin:0px auto;
+	width:100%;
+	float:left;
+	font-family:helvetica;
+	
+	
+}
+
+/* css properties of header */
+
+body .header_nav{
+	
+	width:100%;
+	float:left;
+	height:3.9583333333333335vw; 
+	border:0vw;
+	border-bottom:1px solid #dfdfdf;
+	box-shadow: 0px 0px 8px #ccc;
+}
+
+body .header_nav nav{
+	width:100%;
+	float:left;
+	height:inherit;
+	
+}
+body .header_nav nav .header-ul{
+	
+		padding:0vw;
+		display:inline-block;
+		height:inherit;
+}
+body .header_nav nav .header-ul li{
+	height:inherit;
+	line-height:3.9583333333333335vw;
+	
+}
+body .header_nav nav .header-ul li a{
+	height:inherit;
+	line-height:3.9583333333333335vw;
+	
+}
+body .header_nav nav .right-header-nav{
+	
+
+	float:right;
+	margin:0vw 3.125vw 0vw 0vw;
+	list-style:none;
+}
+body .header_nav nav .left-header-nav{
+	margin:0vw 0vw 0vw 2.0833333333333335vw;
+	float:left;
+	list-style:none;
+	
+}
+body .header_nav nav .left-header-nav .header-logo-hlink .header-logo{
+	width:10.25vw;
+	height:2.04375vw;
+	position:relative;
+    top:0.5208333333333334vw;
+
+}
+body .header_nav nav .left-header-nav .header-logo-hlink a{
+		line-height:3.125vw;
+		text-decoration:none;
+		font-family:"Arial Black", Gadget, sans-serif;
+		font-size:1.71875vw;
+		color:#1D3F57;
+		font-weight:700;
+	
+}
+body .header_nav nav .right-header-nav li{
+	padding:0vw;
+	margin:0vw;
+	float:left;
+	
+}
+body .header_nav nav .right-header-nav li a{
+	
+	display:inline-block;
+	float:left;
+	padding:0vw 1.0416666666666667vw 0vw 1.0416666666666667vw;
+	font-size:12px;
+	text-decoration:none;
+	color:#153147
+}
+body .header_nav nav .right-header-nav li a:hover{
+	text-decoration:underline;
+	color:#728CA1;
+}
+
+body .main-article{
+	width:80%;
+	margin:0px auto;
+	
+	
+}
+body .main-article .main-article-title{
+	width:100%;
+	float:left;
+	
+}
+
+ body .main-article .main-article-title h3{
+      width:100%;
+      padding:0vw 0vw 1.0416666666666667vw 0vw;
+	  color:#22487A;
+	  border-bottom:1px solid #dfdfdf;
+	  float:left;
+	 }
+body .main-article .main-article-content{
+	width:98%;
+	padding:1%;
+	float:left;
+	
+}
+body .main-article .main-article-content h4{
+	width:99%;
+	float:left;
+	padding:0.3125vw 0.4166666666666667vw 0.3125vw 0.4166666666666667vw;
+	font-size:16px;
+	color:#234B80;
+	border:1px solid #2A5896;
+}
+body .main-article .main-article-content p{
+	width:96%;
+	float:left;
+	padding:0vw;
+	margin:0.10416666666666667vw;
+	font-size:14px;
+	font-family:verdana;
+}
+body .main-article .main-article-content .e-x-header{
+	font-weight:700;
+	text-decoration:underline;
+	color:#295F94;
+	font-size:14px;
+	margin:1.3020833333333335vw 0vw 0vw 0vw;
+}
+body .main-article .main-article-content .i-o-header{
+	color:#006D00;
+	font-weight:700;
+	font-family:verdana;
+	margin-top:0.3125vw;
+	margin-left:2%;
+	width:98%;
+}
+body .main-article .main-article-content .n-header{
+	font-weight:700;
+	color:#E30F01;
+}
+body .main-article .main-article-content .para-note{
+	font-size:11px;
+}
+body .main-article .main-article-content pre{
+	float:left;
+	width:96%;
+	margin-top:0.78125vw;
+	margin-bottom:0vw;
+	margin-left:2%;
+	text-align:left;
+	border:1px solid #dfdfdf;
+	padding:1%;
+}
+body footer{
+	width:96%;
+	padding:0.2% 2% 1.2% 2%;
+	margin:0.125vw 0vw 1.525vw 0vw;
+	float:left;
+	
+}
+body footer .footer-items{
+	 width:100%;
+	 float:left;
+	 padding:0vw;
+	 margin:2.0833333333333335vw 0vw 0vw 0vw;
+	 list-style:none;
+	 text-align:center;
+	
+}
+body footer .footer-items .footer-items-wrapper{
+	 display:inline-block;
+	 text-align:left;
+	
+}
+body footer .footer-items .footer-items-wrapper .footer-items-li{
+	display:inline-block;
+	float:left;
+	
+}
+body footer .footer-items .footer-items-wrapper .footer-items-li .li-index{
+	display:inline-block;
+	float:left;
+	font-size:12px;
+	color:#153147;
+	
+}
+body footer .footer-items .footer-items-wrapper .footer-items-li .li-external{
+	display:inline-block;
+	float:left;
+
+	
+}
+body footer .footer-items .footer-items-wrapper .footer-items-li .li-external a{
+	color:#375484;
+	font-size:13px;
+	text-decoration:none;
+	cursor:pointer;
+	padding:0vw 0.3125vw;
+}
+body footer .footer-items .footer-items-wrapper .footer-items-li .li-external a:hover{
+	text-decoration:underline;
+	color:#1E2D48;
+}

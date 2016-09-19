@@ -1,0 +1,280 @@
+<!DOCTYOE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Documentation</title>
+		<link rel='stylesheet' type='text/css' href='css/style-doc.css'/>
+	</head>
+	<body>
+        <header class ='header_nav'>
+		      <nav>
+			     <ul class='left-header-nav header-ul'>
+				    <li><span class='header-logo-hlink'><a href='http://www.htmlai.com'><img src ='./assets/img/logo_header.png' width='auto' height='auto' alt='HTMLai' class='header-logo'/></a></span> </li>
+				 </ul>
+			     <ul class='right-header-nav header-ul'>
+					<li><a href = 'doc.html' style='text-decoration:underline'>How to use?</a></li> 
+					<li><a href = 'http://www.htmlai.com'>Home</a></li> 
+				 </ul>
+			  </nav>	
+		</header>
+		<article class='main-article'>
+		   <header class='main-article-title'>
+		        <h3>Frigate v1.0 User Guide</h3>
+		   </header>
+		   <div class='main-article-content'>
+		       <h4>About Frigate</h6>
+			   <div class='main-article-sub-content-0'>
+			      <p> Frigate is a html preprocessor which helps write html faster with much less code,time,effort.</p>
+			   </div>
+			   <h4>Syntex for writing basic markup</h4>
+			   <div class='main-article-sub-content-0'>
+			      <pre>
+					  element (.class | #id)*multiplier
+				  </pre>
+				  <p class='e-x-header'>Example:</p>
+				  <p class='i-o-header'>Input:</p>
+				  <pre>
+				       div(.class-name #id-name)*6
+				  </pre>
+				  <p class='i-o-header'>Output:</p>
+				     <pre>
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;id-name&#x22; class=&#x22;class-name&#x22;&#x3E; &#x3C;/div&#x3E;
+				     </pre>
+				  <p class='n-header'>Note - </p>
+				  <p class='para-note'>* The "id" and "class" selectors are optional.They can be null.</p>
+				  <p class='para-note'>* Each element can have max one "id" and one "class".</p>
+				  <p class='para-note'>* The "multiplier" can only be a postitive integer and it's optional.</p>
+				  <p class='e-x-header'>Example:</p>
+				  <p class='i-o-header'>Input:</p>
+				  <pre>
+                        div*6  
+				  </pre>
+				  <p class='i-o-header'>output: </p>
+				  <pre>
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+						&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/div&#x3E;
+				  </pre>
+				  <h4>Syntex for Nesting markup</h4>
+					 <pre>
+					element1(.class #id){
+						   element2(.class #id){
+							   element3(.class #id){
+									......so on
+								  }*multiplier   
+						   }*multiplier
+					}*multiplier
+					 </pre>
+				  <p class='e-x-header'>Example:</p>
+				  <p class='i-o-header'>Input:</p>
+				  <pre>
+					header(.header-class #header-id){
+						  nav(.nav-class #nav-id){
+							   ul(.ul-class #ul-id){
+								   li(.li-class #li-id){
+									   a
+									}*5
+							   }*2
+						  }
+					} 
+				  </pre>
+				  <p class='i-o-header'>Output:</p>
+				  <pre>
+					&#x3C;header id=&#x22;header-id&#x22; class=&#x22;header-class&#x22;&#x3E;
+					   &#x3C;nav id=&#x22;nav-id&#x22; class=&#x22;nav-class&#x22;&#x3E;
+						  &#x3C;ul id=&#x22;ul-id&#x22; class=&#x22;ul-class&#x22;&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+						  &#x3C;/ul&#x3E;
+						  &#x3C;ul id=&#x22;ul-id&#x22; class=&#x22;ul-class&#x22;&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+							 &#x3C;li id=&#x22;li-id&#x22; class=&#x22;li-class&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; &#x3C;/a&#x3E;
+							 &#x3C;/li&#x3E;
+						  &#x3C;/ul&#x3E;
+					   &#x3C;/nav&#x3E;
+					&#x3C;/header&#x3E;
+				  </pre>
+				  <p class='n-header'>Note - </p>
+				  <p class='para-note'>* The "id" and "class" selectors are optional.They can be null.</p>
+				  <p class='para-note'>* In the above example some of the elements have more than one child element.An element can have any no of child elements</p>
+				  <p class='para-note'>* As you can see the "multiplier" is optional if you don't provide a specified integer it is always assumed to be 1.</p>
+				  <p class='e-x-header'> Here is an another example</p>
+				  <p class='i-o-header'>Input: </p>
+				  <pre>
+					header{
+					   nav{
+						   ul{
+							 li{
+							     a(.hyperlink)
+							   }*5
+							  }
+						   ol{
+							   li{
+								   ul{
+									 li{
+									  a(.hyperlink)
+									   }*5
+									  }
+									}
+								   }
+							     }
+						        }
+					div{
+					  span(.span-class)*2
+					}
+				  </pre>
+				  <p class='i-o-header'>Output:</p>
+				  <pre>
+					&#x3C;header id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+					  &#x3C;nav id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						&#x3C;ul id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						&#x3C;/ul&#x3E;
+						&#x3C;ol id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;ul id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							&#x3C;/ul&#x3E;
+						  &#x3C;/li&#x3E;
+						&#x3C;/ol&#x3E;
+					  &#x3C;/nav&#x3E;
+					&#x3C;/header&#x3E;
+					&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; 
+					    &#x3C;span id=&#x22;null&#x22; class=&#x22;span-class&#x22;&#x3E; &#x3C;/span&#x3E;
+					    &#x3C;span id=&#x22;null&#x22; class=&#x22;span-class&#x22;&#x3E; &#x3C;/span&#x3E;  
+					&#x3C;/div&#x3E;
+				  </pre>
+				  <p class='n-header'>Note - </p>
+				  <p class='para-note'>* Whitespace is insignificant and ignored most of the cases.A whitespace is required between "id" and "class" attributes.This is the only case where whitespace is required.</p>
+				  <p class='para-note'>* The above codes could be written without whitespaces.</p>
+				  <p class='e-x-header'> Example</p>
+				  <p class='i-o-header'>Input: </p>
+				  <pre>
+			header{nav{ul{li{a(.hyperlink)}*5}ol{li{ul{li{a(.hyperlink)}*5}}}}}div{span(.span-class)*2}
+				  </pre>
+				  <p class='i-o-header'>Output:</p>
+				  <pre>
+					&#x3C;header id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+					  &#x3C;nav id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						&#x3C;ul id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+						  &#x3C;/li&#x3E;
+						&#x3C;/ul&#x3E;
+						&#x3C;ol id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+						  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							&#x3C;ul id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							  &#x3C;li id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E;
+								&#x3C;a id=&#x22;null&#x22; class=&#x22;hyperlink&#x22;&#x3E; &#x3C;/a&#x3E;
+							  &#x3C;/li&#x3E;
+							&#x3C;/ul&#x3E;
+						  &#x3C;/li&#x3E;
+						&#x3C;/ol&#x3E;
+					  &#x3C;/nav&#x3E;
+					&#x3C;/header&#x3E;
+					&#x3C;div id=&#x22;null&#x22; class=&#x22;null&#x22;&#x3E; 
+					    &#x3C;span id=&#x22;null&#x22; class=&#x22;span-class&#x22;&#x3E; &#x3C;/span&#x3E;
+					    &#x3C;span id=&#x22;null&#x22; class=&#x22;span-class&#x22;&#x3E; &#x3C;/span&#x3E;  
+					&#x3C;/div&#x3E;
+				  </pre>
+			   </div>
+		   </div>
+		</article>
+		<footer>
+		   <div class='footer-items'>
+               <div class='footer-items-wrapper'>
+			        <div class ='footer-items-li footer-items-li-0'>
+					    <div class='li-index'>
+						   &#169Copyright-2016 htmlai.com 
+						</div>
+					</div>
+			   </div>
+		   </div>
+		</footer>
+	</body>
+</html>
