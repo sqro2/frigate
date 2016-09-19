@@ -18,7 +18,7 @@ Writing pure HTML markup is tedious and kills a lot of development time. Frigate
   </pre>
  <hr> 
 <p><b>Input :</b></p>
-				<pre>
+				
 					header(.header-class #header-id){
 						  nav(.nav-class #nav-id){
 							   ul(.ul-class #ul-id){
@@ -28,7 +28,7 @@ Writing pure HTML markup is tedious and kills a lot of development time. Frigate
 							   }*2
 						  }
 					}
-				</pre> 
+			
 <p><b>Output</b></p>
   <pre>
 					&#x3C;header id=&#x22;header-id&#x22; class=&#x22;header-class&#x22;&#x3E;
