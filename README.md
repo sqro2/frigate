@@ -72,9 +72,12 @@ Writing pure HTML markup is tedious and kills a lot of development time. Frigate
   </pre>
   
   
-#installation
-Include jquery to your project(latest dist recommended ).</br>
-Include the file 'frigate.min.js'.
+#installation 
+<b> To install with bower : </b>
+<p> Run this command - bower install frigate</p>
+<b> For manul installation : </b>
+<p>Include jquery to your project(latest dist recommended ).</p>
+<p>Include the file 'frigate.min.js'.</p>
 
 #Usage
 Before using this preprocessor It's neccessary to  get familiar with it's syntax.Please visit <a href='http://www.htmlai.com/doc.html'>This page</a> for documentation.</br>
