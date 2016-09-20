@@ -1,0 +1,21 @@
+{
+  "name": "frigate",
+  "description": "a jquery based html preprocessor",
+  "version" : "1.0.0",
+  "main": "dist/frigate.js",
+  "authors": [
+    "Akshay Bordoloi <xyup.co@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.htmlai.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0"
+  }
+}
