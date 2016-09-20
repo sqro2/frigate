@@ -2,7 +2,7 @@
   "name": "frigate",
   "description": "a jquery based html preprocessor",
   "version" : "1.0.0",
-  "main": "dist/frigate.min.js",
+  "main": "dist/frigate.js",
   "authors": [
     "Akshay Bordoloi <xyup.co@gmail.com>"
   ],
