@@ -75,7 +75,7 @@ Writing pure HTML markup is tedious and kills a lot of development time. Frigate
 #installation 
 <b> To install with bower : </b>
 <p> Run this command - bower install frigate</p>
-<b> For manul installation : </b>
+<b> For manual installation : </b>
 <p>Include jquery to your project(latest dist recommended ).</p>
 <p>Include the file 'frigate.min.js'.</p>
 
